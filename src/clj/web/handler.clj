@@ -5,9 +5,8 @@
             [ring.middleware.reload :refer [wrap-reload]]))
 
 (defroutes routes
-  (GET "/" [] (resource-response "index.html" {:root "public"}))
   (resources "/")
-  (not-found (resource-response "index.html" {:root "public"})))
+  (GET "/*" [] (resource-response "index.html" {:root "public"})))
 
 (def dev-handler (-> #'routes wrap-reload))
 
