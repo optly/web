@@ -1,1 +1,1 @@
-web: java $JVM_OPTS -jar target/uberjar/web-standalone.jar
+web: java $JVM_OPTS -jar target/web-standalone.jar
