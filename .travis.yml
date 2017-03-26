@@ -1,0 +1,19 @@
+language: clojure
+
+lein: 2.7.1
+
+sudo: required
+
+script:
+- lein cljfmt check
+
+deploy:
+  matrix:
+  - provider: heroku
+    app: optly-web
+
+  api_key:
+    secure: FistMk8ZxO02N0grMkZ+mo7AwATe7PfRp47yq0mGGAHjZ/M4dJFDiRzMh4lMJSNqsNKCkv/9NBDnUwwGv4V8sjoTVAQ0uLOZI9slMsfESst0N210m4+lGwS1Z/SegUkVulI78iaX4WAF5hRyc1NOGRcKJ19gIAMlvuCpTpXxZP0tYlHYXi4ysYFS62bSI+Mi7EOWZBE9iSEfJh/3ep6sQSAsRyFL5+4IUdGwazh7fsNHeZRkIM/I2Po1kozx01mVdI9ta0m0BrEHMyHP7Pd7IsEF2A0+trOuwaQz7074mb1mNM2Ig6hr2cJoUVU3P73/pMm/LVPmdzEd76+9ncxxsvxMnLL2DGDfhxdKqRA58GnBcM9rRY+r9GaW8l3YiIWqWSOjN84eJTz5RV9yxOezacqTRpjk+X3DJ7hWvptqNdVtD+hdEEugM5rMPlwfSaBye6yToznxLeOmC5KbRbT7aTonhCpUX6zZWhh5erV7OSti+IAXNKY6ci2lfDMnC4NrWC4he024yTQ9Vpc5ekaIF++j3FOQHVqHtgOO6p6D4aK4VYaQjz5Yprpa3v7YiEpUpsUGpOm0g2DHaVkfFpNvOpMHl82OyYglK2X3pcUq0tPqj8Qdl40l7NDWv5WVzP/NQKctG3iEl4qAvW5VKs7AhmrMnPzfqY2AET0+gDMUlRY=
+
+jdk:
+- openjdk7
