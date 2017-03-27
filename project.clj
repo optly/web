@@ -12,6 +12,7 @@
 
   :plugins [[lein-cljsbuild "1.1.4"]
             [lein-re-frisk "0.4.5"]
+            [lein-cljfmt "0.5.6"]
             [lein-garden "0.2.8"]]
 
   :min-lein-version "2.5.3"
