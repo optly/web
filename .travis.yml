@@ -6,6 +6,7 @@ sudo: required
 
 script:
 - lein cljfmt check
+- lein test
 
 deploy:
 - provider: heroku
